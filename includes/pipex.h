@@ -6,7 +6,7 @@
 /*   By: jkasongo <jkasongo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/05 15:56:20 by jkasongo          #+#    #+#             */
-/*   Updated: 2021/07/06 02:11:20 by jkasongo         ###   ########.fr       */
+/*   Updated: 2021/07/08 03:18:25 by jkasongo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,4 +20,14 @@
 # include <stdio.h>
 # include <string.h>
 # include <errno.h>
+# include "libft.h"
+
+void	ft_write_error_with_errno(char *str);
+void	ft_write_error(char *str);
+char	**get_env_directories(char *env[]);
+char	*join_path(const char *dir, const char *path);
+void	ft_dealloc_matrix(char **matrix);
+void	connect(int *fds[], char *cmd1, char *cmd2, char *env[]);
+void	make_first(int stream, int file, char *cmd, char *env[]);
+void	make_last(int stream, int file, char *cmd, char *env[]);
 #endif

@@ -6,7 +6,7 @@
 #    By: jkasongo <jkasongo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/05 16:57:50 by jkasongo          #+#    #+#              #
-#    Updated: 2021/07/05 17:06:43 by jkasongo         ###   ########.fr        #
+#    Updated: 2021/07/08 03:18:55 by jkasongo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 
 #source
-SRCS =	pipex.c
+SRCS =	main.c pipex.c utils.c
 SRCS_TEST1 =	prog1.c
 SRCS_TEST2 =	prog2.c
 
@@ -27,7 +27,8 @@ OBJS_TEST2= $(SRCS_TEST2:%.c=%.o)
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	@$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+	@$(MAKE) re -C ./libft
+	@$(CC) $(CFLAGS) $(OBJS) -o $(NAME) -L./libft -lft
 	@echo "pipex builded"
 
 test: $(OBJS_TEST1) $(OBJS_TEST2)

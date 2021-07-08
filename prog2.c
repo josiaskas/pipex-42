@@ -22,7 +22,7 @@ int	main(int argc, char *argv[])
 	int		rtn;
 
 	len = 0;
-	while (argc > 1)
+	while (argc > 0)
 	{
 		len = ft_strlen(argv[argc - 1]);
 		write(STDOUT_FILENO, argv[argc - 1], len);
