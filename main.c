@@ -6,7 +6,7 @@
 /*   By: jkasongo <jkasongo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/08 01:27:21 by jkasongo          #+#    #+#             */
-/*   Updated: 2021/07/08 03:23:39 by jkasongo         ###   ########.fr       */
+/*   Updated: 2021/07/08 21:24:22 by jkasongo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,6 @@ int	main(int argc, char *argv[])
 
 	if (argc != 5)
 		ft_write_error("usage: ./pipex file1 cmd1 cmd2 file2");
-	signal(SIGPIPE, SIG_IGN);
 	checker = pipe(stream);
 	if (checker < 0)
 		ft_write_error_with_errno(NULL);

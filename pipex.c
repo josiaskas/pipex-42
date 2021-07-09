@@ -6,7 +6,7 @@
 /*   By: jkasongo <jkasongo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/05 16:12:42 by jkasongo          #+#    #+#             */
-/*   Updated: 2021/07/08 03:15:53 by jkasongo         ###   ########.fr       */
+/*   Updated: 2021/07/08 21:24:29 by jkasongo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,9 +51,9 @@ void	make_first(int stream, int file, char *cmd, char *env[])
 	close(file);
 	close(stream);
 	ft_execve(dirs, args, env);
-	ft_putstr_fd("pipex: ", STDOUT_FILENO);
-	ft_putstr_fd(args[0], STDOUT_FILENO);
-	ft_putendl_fd(", command not found", STDOUT_FILENO);
+	ft_putstr_fd("pipex: ", STDERR_FILENO);
+	ft_putstr_fd("command not found: ", STDERR_FILENO);
+	ft_putendl_fd(args[0], STDERR_FILENO);
 	ft_dealloc_matrix(dirs);
 	ft_dealloc_matrix(args);
 	exit(127);
@@ -73,9 +73,9 @@ void	make_last(int stream, int file, char *cmd, char *env[])
 	close(file);
 	close(stream);
 	ft_execve(dirs, args, env);
-	ft_putstr_fd("pipex: ", STDOUT_FILENO);
-	ft_putstr_fd(args[0], STDOUT_FILENO);
-	ft_putendl_fd(", command not found", STDOUT_FILENO);
+	ft_putstr_fd("pipex: ", STDERR_FILENO);
+	ft_putstr_fd("command not found: ", STDERR_FILENO);
+	ft_putendl_fd(args[0], STDERR_FILENO);
 	ft_dealloc_matrix(dirs);
 	ft_dealloc_matrix(args);
 	exit(127);

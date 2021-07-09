@@ -6,7 +6,7 @@
 /*   By: jkasongo <jkasongo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/06 14:54:53 by jkasongo          #+#    #+#             */
-/*   Updated: 2021/07/08 03:17:55 by jkasongo         ###   ########.fr       */
+/*   Updated: 2021/07/08 19:55:16 by jkasongo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 void	ft_write_error_with_errno(char *str)
 {
-	ft_putstr_fd("pipex: ", STDOUT_FILENO);
-	ft_putstr_fd(strerror(errno), STDOUT_FILENO);
+	ft_putstr_fd("pipex: ", STDERR_FILENO);
+	ft_putstr_fd(strerror(errno), STDERR_FILENO);
 	if (str)
 	{
 		write(STDERR_FILENO, ": ", 3);
-		ft_putstr_fd(str, STDOUT_FILENO);
+		ft_putstr_fd(str, STDERR_FILENO);
 	}
 	write(STDERR_FILENO, "\n", 1);
 	exit(1);
@@ -27,8 +27,8 @@ void	ft_write_error_with_errno(char *str)
 
 void	ft_write_error(char *str)
 {
-	ft_putstr_fd("pipex: ", STDOUT_FILENO);
-	ft_putendl_fd(str, STDOUT_FILENO);
+	ft_putstr_fd("pipex: ", STDERR_FILENO);
+	ft_putendl_fd(str, STDERR_FILENO);
 	exit(1);
 }
 

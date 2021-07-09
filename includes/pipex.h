@@ -6,7 +6,7 @@
 /*   By: jkasongo <jkasongo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/05 15:56:20 by jkasongo          #+#    #+#             */
-/*   Updated: 2021/07/08 03:18:25 by jkasongo         ###   ########.fr       */
+/*   Updated: 2021/07/08 19:35:12 by jkasongo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@
 # include <string.h>
 # include <errno.h>
 # include "libft.h"
+
+# define PROGNAME "pipex"
 
 void	ft_write_error_with_errno(char *str);
 void	ft_write_error(char *str);
