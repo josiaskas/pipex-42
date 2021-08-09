@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jkasongo <jkasongo@student.42.fr>          +#+  +:+       +#+         #
+#    By: jkasongo <jkasongo@student.42quebec.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/05 16:57:50 by jkasongo          #+#    #+#              #
-#    Updated: 2021/07/08 03:18:55 by jkasongo         ###   ########.fr        #
+#    Updated: 2021/08/09 15:49:00 by jkasongo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,8 +17,8 @@ CFLAGS = -Wall -Wextra -Werror
 
 #source
 SRCS =	main.c pipex.c utils.c
-SRCS_TEST1 =	prog1.c
-SRCS_TEST2 =	prog2.c
+SRCS_TEST1 =	prog_test1.c
+SRCS_TEST2 =	prog_test2.c
 
 OBJS= $(SRCS:%.c=%.o)
 OBJS_TEST1= $(SRCS_TEST1:%.c=%.o)
