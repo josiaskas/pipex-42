@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   pipex.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jkasongo <jkasongo@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jkasongo <jkasongo@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/05 15:56:20 by jkasongo          #+#    #+#             */
-/*   Updated: 2021/07/08 19:35:12 by jkasongo         ###   ########.fr       */
+/*   Updated: 2021/08/09 15:51:02 by jkasongo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 # include <stdio.h>
 # include <string.h>
 # include <errno.h>
-# include "libft.h"
+# include "../libft/libft.h"
 
 # define PROGNAME "pipex"
 
